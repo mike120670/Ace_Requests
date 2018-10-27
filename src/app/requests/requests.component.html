@@ -1,0 +1,312 @@
+<div class="container">
+    <div class=" wrapper " style="border: 3px solid black; ">
+        <div class="header" style="background: rgb(255, 254, 254); width: 90%;padding: 10px;margin: auto; ">
+
+            <img src="/assets/Images/Ace_Logo_Small.jpg" alt="img" style="float: left;" />
+            <div class="header" style="background: rgb(0, 56, 143); width: 60%; padding: 10px;margin: auto; ">
+                <h1 style="text-align:center;color: white;">Ace Parkings IT Request Form</h1>
+                <h5 style="text-align:center;color: white;">Please enter all information accurately.</h5>
+            </div>
+        </div>
+        <div class="group1">
+            <div style="text-align:center;background: rgba(255,146,10,1);">
+                <header>
+                    Request Type
+                </header>
+            </div>
+            <div style="float: left;margin-top: 1.2em;padding-left:2em;padding-right: 2em;">
+                <p>Please check all that apply</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Software Purchase</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Hardware Purchase</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Account Setup/Transfer</label>
+                </div>
+            </div>
+            <div style="float: left;margin-top: 1.2em;padding-left:2em;padding-right: 2em;">
+                <p>Is this request for a new or existing account:</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="form-radiok-input" type="radio" id="Radio1" value="option1">
+                    <label class="form-radio-label" for="inlineRadio1">New Account</label>
+                </div>
+                <div class="column">
+                    <input class="form-radio-input" type="radio" id="Radio2" value="option2">
+                    <label class="form-radio-label" for="inlineRadio2">Existing Account</label>
+                </div>
+            </div>
+        </div>
+        <!-- end group1 -->
+        <button class="accordion" (click)="section['second'] = !section['second']">Section 2</button>
+        <div class="group2" *ngIf="section['second']">
+            <div style="text-align:center;background: rgba(255,146,10,1);">
+                <header>
+                    Access Required
+                </header>
+            </div>
+            <div style="float: left;margin-top: 1.2em;padding-left:2em;padding-right: 2em;">
+                <p>Please check all that apply</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Lotue Notes</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Sharepoint</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Time & Attendance</label>
+                </div>
+                <!-- </div>-->
+                <div class="row">
+                    <div class="column" style="padding-left: 2.5em">
+                        <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">AutoShift(shift report data entry)Mgrs only</label>
+                    </div>
+                    <div class="column" style="padding-left: 2.5em">
+                        <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">MyAce(client viewing/approving)Mgrs only</label>
+                    </div>
+                </div>
+                <!--NESTED ROW -->
+            </div>
+        </div>
+        <!-- end group2 -->
+        <!-- end group2 -->
+        <button class="accordion" (click)="section['third'] = !section['third']">Section 3</button>
+
+        <div class="group3" *ngIf="section['third']">
+            <div style="text-align:center;background: rgba(255,146,10,1); ">
+                <header>
+                    User Account Information
+                </header>
+            </div>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Employee Name: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputEmpName " placeholder=" ">
+                </div>
+                <label for="rg-from ">Location #: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputLoc " placeholder=" ">
+                </div>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Title: </label>
+                <div class="form-group col-md-4 " style="padding-left: 6.3em; ">
+                    <input type="text " class="form-control " id="inputTitle " placeholder=" ">
+                </div>
+                <label for="rg-from " style="padding-left: 3em; ">Location Name: </label>
+                <div class="form-group col-md-4 " style="padding-left: 2em; ">
+                    <input type="text " class="form-control " id="inputLocaName " placeholder=" ">
+                </div>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Employee #: </label>
+                <div class="form-group col-md-4 " style="padding-left: 3em; ">
+                    <input type="text " class="form-control " id="inputEmpNum " placeholder=" ">
+                </div>
+                <label for="rg-from ">Division Name: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputDivName " placeholder=" ">
+                </div>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Phone(not cell): </label>
+                <div class="form-group col-md-4 " style="padding-left: 1.5em; ">
+                    <input type="text " class="form-control " id="inputPhoneNum " placeholder=" ">
+                </div>
+                <label for="rg-from " style="padding-left: 3em; ">Street: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputStreet " placeholder=" ">
+                </div>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Employee Name: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputEmpName " placeholder=" ">
+                </div>
+                <label for="rg-from " style="padding-left: 3em; ">City: </label>
+                <div class="form-group col-md-4 ">
+                    <input type="text " class="form-control " id="inputLoca " placeholder=" ">
+                </div>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Cell: </label>
+                <div class="form-group col-md-4 " style="padding-left: 6.5em; ">
+                    <input type="text " class="form-control " id="inputCell " placeholder=" ">
+                </div>
+                <form class="form-inline " style="padding-left: 5em; ">
+                    <label for="rg-from ">State: </label>
+                    <div class="form-group col-md-4 " style="padding-left: 3em; ">
+                        <input type="text " class="form-control " id="inputState " placeholder=" ">
+                    </div>
+                </form>
+            </form>
+            <br/>
+            <form class="form-inline " style="padding-left: 3em; ">
+                <label for="empName ">Reports To: </label>
+                <div class="form-group col-md-4 " style="padding-left: 3.5em; ">
+                    <input type="text " class="form-control " id="inputRepTo " placeholder=" ">
+                </div>
+                <form class="form-inline " style="padding-left: 3em; ">
+                    <label for="rg-from " style="padding-left: 3em; ">Zip: </label>
+                    <div class="form-group col-md-4 ">
+                        <input type="text " class="form-control " id="inputZip " placeholder=" ">
+                    </div>
+                </form>
+            </form>
+            <br/>
+            <form class="form ">
+                <div class="text " style="padding-left: 3em; ">
+                    <label for="comment " style="float: left; ">Additional Comments:</label>
+                    <textarea rows="4 " cols="90 " name="comment " id="comment "></textarea>
+                </div>
+            </form>
+            <br/>
+        </div>
+        <!-- end group3 -->
+        <button class="accordion" (click)="section['forth'] = !section['forth']">Section 4</button>
+        <div class="group4" *ngIf="section['forth']">
+            <div style="text-align:center;background: rgba(255,146,10,1); ">
+                <header>
+                    Purchase Information
+                </header>
+            </div>
+            <div class="row ">
+                <div class="column ">
+                    <form class="form-inline " style="float: left; ">
+                        <label for="empName ">Equipment will be:</label>
+                        <div class="form-group col-md-1 ">
+                            <input type="text " class="form-control " id="inputRepTo " placeholder=" ">
+                        </div>
+                    </form>
+                    <form class="form-inline " style="float: left; ">
+                        <label for="rg-from ">Charged to Dept:</label>
+                        <div class="form-group col-md-1 ">
+                            <input type="text " class="form-control " id="inputZip " placeholder=" ">
+                        </div>
+                    </form>
+                    <form class="form-inline " style="float: left; ">
+                        <label for="rg-from ">Charge to Account:</label>
+                        <div class="form-group col-md-1 ">
+                            <input type="text " class="form-control " id="inputZip " placeholder=" ">
+                        </div>
+
+                    </form>
+                    <br/>
+                    <br/>
+                    <!--Additional Comments box 2-->
+                    <form class="form ">
+                        <label for="comment " style="float: left; ">Additional Comments:</label>
+                        <div class="text " style="float: left;padding-left: 1em; ">
+                            <textarea rows="4 " cols="90 " name="comment " id="comment "></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- </div>
+         end group4 -->
+        <button class="accordion" (click)="section['fifth'] = !section['fifth']">Section 5</button>
+        <div class="group5" *ngIf="section['fifth']">
+            <div style="text-align:center;background: rgba(255,146,10,1); ">
+                <header>
+                    Software Information
+                </header>
+            </div>
+            <!-- <div style="float: left;margin-top: 1.2em;padding-right: 2em; ">
+                <p>Please check all that apply</p>
+            </div> -->
+            <div class="row ">
+                <div class="column ">
+                    <form class="form ">
+                        <label for="rg-from " style="float: left; "> List required Software:</label>
+                        <div class="form-group col-md-8 " style="float: left; ">
+                            <input type="text " class="form-control " id="inputZip " placeholder=" ">
+                        </div>
+                    </form>
+                    <br/>
+                    <div>
+                        <form class="form ">
+                            <label for="rg-from " style="float: left; "> Reason for Software:</label>
+                            <div class="form-group col-md-8 " style="float: left; ">
+                                <input type="text " class="form-control " id="inputZip " placeholder=" ">
+                            </div>
+                        </form>
+                    </div>
+                    <br/>
+                    <!--Additional Comments box 3-->
+                    <form class="form ">
+                        <label for="comment " style="float: left; ">Additional Comments:</label>
+                        <div class="text " style="float: left;padding-left: 1em; ">
+                            <textarea rows="4 " cols="90 " name="comment " id="comment "></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end group5 -->
+        <button class="accordion" (click)="section['sixth'] = !section['sixth']">Section 6</button>
+        <div class="group6" *ngIf="section['sixth']">
+            <div style="text-align:center;background: rgba(255,146,10,1);">
+                <header>
+                    Hardware Information
+                </header>
+            </div>
+            <div style="float: left;margin-top: 1.2em;padding-right: 2em;">
+                <p>Please check all that apply</p>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Lotue Notes</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Sharepoint</label>
+                </div>
+                <div class="column">
+                    <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Time & Attendance</label>
+                </div>
+                <!-- </div>-->
+                <div class="row">
+                    <div class="column" style="padding-left: 2.5em">
+                        <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">AutoShift(shift report data entry)Mgrs only</label>
+                    </div>
+                    <div class="column" style="padding-left: 2.5em">
+                        <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">MyAce(client viewing/approving)Mgrs only</label>
+                    </div>
+                </div>
+                <!--NESTED ROW -->
+            </div>
+        </div>
+        <!-- end group6 -->
+        <br/>
+        <br/>
+    </div>
+    <!-- end wrapper -->
+</div>
+<!-- end container -->
+<br/>
+<br/>
